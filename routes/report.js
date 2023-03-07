@@ -6,27 +6,28 @@ const {
   verifyToken,
 } = require("./verifyToken");
 
+
 const CrimeReport = require('../models/report');
 const Comment = require('../models/Comment');
 const { ObjectId } = require('mongodb');
 
-// Middleware to verify JWT token
-const authMiddleware = (req, res, next) => {
-  const authHeader = req.headers['authorization'];
-  const token = authHeader && authHeader.split(' ')[1];
+// // Middleware to verify JWT token
+// const authMiddleware = (req, res, next) => {
+//   const authHeader = req.headers['authorization'];
+//   const token = authHeader && authHeader.split(' ')[1];
 
-  if (!token) {
-    return res.status(401).json({ message: 'Missing authentication token' });
-  }
+//   if (!token) {
+//     return res.status(401).json({ message: 'Missing authentication token' });
+//   }
 
-  try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.user = decoded;
-    next();
-  } catch (err) {
-    return res.status(401).json({ message: 'Invalid authentication token' });
-  }
-};
+//   try {
+//     const decoded = jwt.verify(token, process.env.JWT_SECRET);
+//     req.user = decoded;
+//     next();
+//   } catch (err) {
+//     return res.status(401).json({ message: 'Invalid authentication token' });
+//   }
+// };
 
 
 // Create a new crime report
