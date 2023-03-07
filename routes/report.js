@@ -7,7 +7,7 @@ const {
 } = require("./verifyToken");
 
 
-const CrimeReport = require('../models/report');
+const CrimeReport = require('../models/Report');
 const Comment = require('../models/Comment');
 const { ObjectId } = require('mongodb');
 
