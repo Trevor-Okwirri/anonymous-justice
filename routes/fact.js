@@ -2,9 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const Fact = require('../models/Fact');
-const {
-    verifyToken,
-  } = require("./verifyToken");
+const { verifyToken,} = require("./verifyToken");
   const { ObjectId } = require('mongodb');
 // Get all facts
 router.get('/', async (req, res) => {
