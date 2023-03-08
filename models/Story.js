@@ -38,7 +38,8 @@ const storySchema = new mongoose.Schema({
     required: true
   },
   videoUrl: {
-    type: String
+    type: String,
+    required: true
   },
   thumbnailUrl: {
     type: String
