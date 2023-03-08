@@ -17,7 +17,7 @@ const cors = require("cors");
 dotenv.config();
 
 mongoose
-  .connect("mongodb+srv://trevorokwirri:trevor@1234@anonymous-justice.eppsouf.mongodb.net/?retryWrites=true&w=majority/anonymous-justice")
+  .connect("mongodb+srv://trevorokwirri:trevor%401234@anonymous-justice.eppsouf.mongodb.net/?retryWrites=true&w=majority/anonymous-justice")
   .then(() => console.log("DB Connection Successfull!"))
   .catch((err) => {
     console.log(err);
